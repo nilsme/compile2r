@@ -1,0 +1,4 @@
+# ignore folder with compiled packages
+pkgs/
+# ignore folder with archived R runtime
+R-base/

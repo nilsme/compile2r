@@ -1,0 +1,22 @@
+version: '3'
+services:
+
+  compiler:
+    build:
+      context: .
+      args:
+        - R_VERSION=${R_VERSION}
+        - CRAN_MIRROR=${CRAN_MIRROR}
+    image: compiler
+    container_name: compiler
+    environment:
+      - R_VERSION=${R_VERSION}
+      - CRAN_MIRROR=${CRAN_MIRROR}
+      - PKGS
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./scripts:/opt/scripts
+      - ./R-base:/opt/R-base
+      - ./pkgs:/opt/pkgs
+    command: /opt/scripts/compile.sh ${PKGS}
