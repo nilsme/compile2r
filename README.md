@@ -4,8 +4,8 @@
 
 ## Set CRAN mirror and R version
 
-Edit `.env` to edit CRAN mirror an R version. A list of possible mirrors is
-listed here: <https://cran.r-project.org/mirrors.html>
+Edit `.env` to edit CRAN mirror. A list of possible mirrors is listed here:
+<https://cran.r-project.org/mirrors.html>
 
 ## Set R packages to be compiled
 
@@ -23,3 +23,8 @@ export PKGS='Cairo png'
 ```Shell script
 docker-compose up
 ```
+
+## R packages and R-base
+
+All binary packages are placed in `./pkgs` and an archived version of the used
+R runtime is placed in `./R-base`.
