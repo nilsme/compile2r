@@ -15,5 +15,5 @@ pkgs <- miniCRAN::pkgDep(args)
 # build binary packages for all packages including dependencies
 install.packages(pkgs,
                  repos = cran_mirror,
-                 lib = '/opt/library',
-                 INSTALL_opts = '--build')
+                 lib = "/opt/library",
+                 INSTALL_opts = "--build")
